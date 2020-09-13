@@ -1,0 +1,141 @@
+doctype html
+html
+	head
+		include jade/vars
+		include jade/functions
+		include jade/metatags
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700", rel="stylesheet", type="text/css")
+		link(href="css/presidente.css", rel="stylesheet")
+		link(href="css/vendor/venobox.css", rel="stylesheet")
+		include jade/analytics
+
+	body
+		aside.loading
+		include jade/nav
+
+		main
+			header
+				.column
+					img(src="img/logo/carnaval.png").logo
+					h1 Event Landing Page
+					a.flat.blue(href="../project/carnaval_presidente_2015/home.html" target="_blank") Go to Carnaval Presidente
+
+			section.content
+				.container
+
+					section.info
+						h2 Brand Overview
+
+						p Presidente Beer is a symbol of Dominican quality. An authentic expression of freshness, fun and youth. An emblem of popular culture that has remained relevant in Dominican society for over 80 years.
+
+						p Among Dominicans, enjoying a “Presidente Cold Beer“ is like watching a baseball game. President beer's brand is hip, vibrant and full of energy.
+
+					section.info
+						h2 My Role
+							small Front-end Developer at Capital DBG
+
+						p I was provided initially with a photoshop design mockup.
+
+						ul
+							li Defined project structure and boilerplates.
+							li Set the environment to work with GruntJs.
+							li Optimized and resized all the images to the minimum width & height.
+							li Built an icon set aligned with the brand’s design system.
+							li Used HTML, Sass and JavaScript for the front-end development.
+							li Designed missing elements like OG image (Facebook preview) and loading.
+							li Defined metadata.
+
+						.skills_box
+							span HTML
+							span Sass
+							span jQuery
+							span ColorBox
+							span GruntJs
+							span PHP
+
+			section.footer
+				img(src="img/beer.png").beer.big
+				img(src="img/beer.png").beer.small
+
+				article.website
+					h3 pageviews
+					p 116,072
+
+				a(href="https://youtu.be/4C5gvqLIR6k" data-autoplay="true" data-vbtype="youtube").venobox
+					img(src="img/videos/carnaval.jpg").video
+
+				article.snetwork
+					.column.icon
+						span.fa.fa-facebook-official
+					.column.center
+						h3 engagement
+						p 462,687
+					.column
+						h3 accounts
+						p 7,492,584
+
+				article.snetwork
+					.column.icon
+						span.fa.fa-twitter
+					.column.center
+						h3 engagement
+						p 37,716
+					.column
+						h3 impressions
+						p 137,398,592
+
+				article.snetwork
+					.column.icon
+						span.fa.fa-instagram
+					.column.center
+						h3 interactions
+						p 95,821
+					.column
+
+			section.gallery
+
+				h1 OTHER PROJECTS
+
+				a(href="../project/carnaval_presidente_2015/home.html" target="_blank").pronosticos_ux
+					img(src="img/3d/presidente-carnaval.png")
+					.hover
+						p GO TO CARNAVAL PRESIDENTE 2015
+
+				a(href="../project/carnaval_presidente_2015/filter.html" target="_blank").presidente_filter
+					img(src="img/3d/filtro_carnaval.png")
+					.hover
+						p GO TO CARNAVAL PRESIDENTE 2015'S FILTER
+
+				a(href="../project/coroapp/" target="_blank").coro_app
+					img(src="img/3d/coroapp.png")
+					.hover
+						p GO TO DESTAPA EL CORO’S BETA TEST
+
+				a(href="../docs/coroapp_ux.pdf" target="_blank").coro_flow
+					img(src="img/3d/userflow.png")
+					.hover
+						p SEE DESTAPA EL CORO’S USER FLOW
+
+				a(href="../project/photo/" target="_blank").photo_app
+					img(src="img/3d/photo.png")
+					.hover
+						p GO TO PHOTO ASSIGMENT’S APP
+
+				a(href="../docs/pronosticos_ux.pdf" target="_blank").pronosticos_ux
+					img(src="img/3d/pronosticos.png")
+					.hover
+						p SEE PRONOSTICO’S WIREFRAME
+
+				a(href="../project/aniversario_loader/" target="_blank").presidente_loader
+					img(src="img/3d/presidente-loader.png")
+					.hover
+						p SEE PRESIDENTE’S LOADER
+
+				a(href="../project/verano_filter/" target="_blank").presidente_filter
+					img(src="img/3d/filter.png")
+					.hover
+						p SEE PRESIDENTE’S FILTER
+
+		script(src="js/vendor/jquery-1.11.2.min.js")
+		script(src="js/vendor/venobox.min.js")
+		script(src="js/application_cases.js")

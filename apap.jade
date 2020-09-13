@@ -1,0 +1,57 @@
+doctype html
+html
+	head
+		include jade/vars
+		include jade/functions
+		include jade/metatags
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700", rel="stylesheet", type="text/css")
+		link(href="css/apap.css", rel="stylesheet")
+		link(href="css/vendor/venobox.css", rel="stylesheet")
+		include jade/analytics
+
+	body
+		aside.loading
+		include jade/nav
+
+		main
+			header
+				.column
+					img(src="img/logo/apap.png" width="60")
+					h1 Single Page Application
+					a(href="https://player.vimeo.com/video/211801157" data-autoplay="true" data-vbtype="vimeo").venobox
+						img(src="img/videos/apap.jpg").video
+					a.flat.yellow(href="../project/mineros/" target="_blank") Go to The App
+
+			section.content
+				.container
+
+					section.info
+						h2 Brand Overview
+
+						p The Popular Association of Savings and Loans (APAP) is a private financial institution, of a mutualist nature, created under the Law No. 5897, of May 14, 1962, with the objective of promoting savings for the financing of the purchase, construction and/or improvement of the family home.
+
+						p Beyond its traditional leadership in financing affordable and middle-class housing, and as part of its diversification strategy, APAP has extended its support to the most important productive sectors of the country, consolidating its participation in the Dominican financial system.
+
+					section.info
+						h2 My Role
+							small Front-end Developer at Capital DBG
+
+						p I was provided with a design mockup photoshop file initially.
+
+						ul
+							li Defined project structure and boilerplates.
+							li Optimized and resized all the images to the minimum width & height.
+							li Built an icon set aligning with the brand’s design system.
+							li Used Jade, Sass and jQuery for the front-end development.
+							li Designed missing elements like loading.
+							li Defined metadata.
+
+
+						.skills_box
+							span Jade
+							span Sass
+							span jQuery
+
+		script(src="js/vendor/jquery-1.11.2.min.js")
+		script(src="js/vendor/venobox.min.js")
+		script(src="js/application_cases.js")

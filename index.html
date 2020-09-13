@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Miguel Rivas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="Miguel Rivas">
+    <meta property="og:site_name" content="Miguel Rivas">
+    <meta property="og:description" content="Web Designer Portfolio">
+    <meta name="keywords" content="miguel, rivas, aguacatekun, aguacate, web, designer, frontend, developer, porfolio, santo, domingo, dominican, republic, united state, usa">
+    <meta name="description" content="Web Designer Portfolio">
+    <meta property="og:image" content="http://miguelrivas.me/img/portfolio.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <link rel="icon" type="image/png" href="http://miguelrivas.me/img/logo.png">
+    <link rel="apple-touch-icon-precomposed" href="http://miguelrivas.me/img/logo.png">
+    <link rel="apple-touch-icon" href="http://miguelrivas.me/img/logo.png">
+    <meta name="msapplication-TileColor" content="#222">
+    <meta name="msapplication-TileImage" content="http://miguelrivas.me/img/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/vendor/venobox.css" rel="stylesheet">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-89989670-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <aside class="loading"></aside>
+    <nav>
+      <div class="container">
+        <button class="fa fa-bars"></button>
+        <button class="fa fa-times"></button>
+        <ul class="navigation">
+          <li><a href="../portfolio/">Home</a></li>
+          <ul>
+            <li><a href="drlogic.html">DrLogic</a></li>
+            <li><a href="apap.html">Apap</a></li>
+            <li><a href="presidente.html">Presidente</a></li>
+            <li><a href="bpr.html">BPR Bank</a></li>
+          </ul>
+          <li><a href="tests.html">Prototypes</a></li>
+        </ul>
+        <div class="links"><a href="https://www.linkedin.com/in/miguel-rivas-b576bb74" target="_blank" alt="Linkedin Profile" class="fa fa-linkedin"></a><a href="http://codepen.io/aguacatekun/" target="_blank" alt="Codepen Profile" class="fa fa-codepen"></a></div>
+      </div>
+    </nav>
+    <main ng-app="gallery" ng-controller="galleryController as ctr">
+      <header>
+        <div class="container">
+          <h1>Hi, My name is Miguel Rivas.<br>I'm a Frontend Developer living in Washington, DC.</h1>
+          <input type="text" placeholder="Filter Projects By" ng-model="search">
+          <button ng-click="search = ''" class="video-f">All Projects</button>
+          <button ng-click="search = 'Case'" class="all">Top Projects</button>
+          <button ng-click="search = 'Frontend'" class="code">HTML / CSS / JS</button>
+          <button ng-click="search = 'Motion Graphics'" class="video-f">Motion Graphics</button>
+          <button ng-click="search = 'Design'" class="design">Design</button>
+        </div>
+      </header>
+      <section ng-class="newClass" class="gallery"><a ng-repeat="data in filteredData | filter:search | orderBy:['-date']" ng-href="{{data.url}}" ng-class="{ 'venobox vbox-item':data.isVideo }" target="{{data.target}}" data-vbtype="{{data.isVideo &amp;&amp; 'vimeo' || '' }}" data-autoplay="{{data.isVideo}}" class="{{data.bgColor}}"><img ng-src="img/3d/{{data.preview}}.png">
+          <div class="hover">
+            <h2>{{ data.title }} /<em> {{ data.type }}</em>
+              <time>{{ data.date }}</time>
+            </h2>
+            <ul>
+              <li ng-repeat="element in data.summary | orderBy">{{element}}</li>
+            </ul>
+          </div></a></section>
+    </main>
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="js/vendor/venobox.min.js"></script>
+    <script src="js/application_cases.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/projects_db.js"></script>
+  </body>
+</html>

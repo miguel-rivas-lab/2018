@@ -1,0 +1,32 @@
+@import 'application_cases';
+
+header
+{
+	background: url(../img/headers/bpr.jpg) bottom no-repeat;
+
+	@media (max-width: $largeScreen)
+	{
+		background: #4b4b4b;
+	}
+	@media (min-width: $largeScreen)
+	{
+		padding-top: 260px;
+	}
+}
+
+h1
+{
+	color: #ccc;
+}
+
+nav
+{
+	button.fa.fa-bars
+	{
+		color: #ccc;
+	}
+}
+
+.info:first-child {
+	border-bottom: 3px solid #aaa;
+}

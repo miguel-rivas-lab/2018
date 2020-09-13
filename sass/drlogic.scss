@@ -1,0 +1,163 @@
+@import 'application_cases';
+
+header {
+	background: url(../img/headers/drlogic.jpg) bottom no-repeat;
+
+	@media (max-width: $largeScreen) {
+		background: #3961d3;
+	}
+	@media (min-width: $largeScreen) {
+		padding-top: 140px;
+	}
+}
+
+h1 {
+	color: #052749;
+}
+
+section.gallery
+{
+	font-size: 0;
+
+	h1
+	{
+		font-size: 21pt;
+		text-align: center;
+		color: #000;
+		padding: 30px 0;
+		margin: 0;
+	}
+
+	a
+	{
+		display: inline-block;
+		width: 20%;
+		height: 20vw;
+		overflow: hidden;
+		position: relative;
+
+		@media (max-width: $SmallScreen)
+		{
+			display: block;
+			width: 100%;
+			height: 100vw;
+		}
+
+		&.mint { background-color: #08e687; }
+		&.salmon { background-color: #ff4d4d; }
+		&.orange { background-color: #ffc839; }
+		&.blue { background-color: #0880e6; }
+		&.purple { background-color: #8d74e0; }
+
+		& .hover { background-color: inherit; }
+
+		& .hover > p
+		{
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #000;
+			padding: 20px;
+			font-size: 25pt;
+
+			@media (max-width: 666px)
+			{
+				font-size: 25pt;
+			}
+
+		}
+
+		& > img
+		{
+			width: 160%;
+			transform: translate(10px, 10px);
+			transition: 500ms ease transform;
+		}
+
+		.hover
+		{
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			opacity: 0;
+			transition: 500ms ease opacity;
+
+			@media (max-width: 666px)
+			{
+				opacity: .8;
+			}
+
+		}
+
+		&:hover {
+			& > .hover
+			{
+				opacity: .8;
+			}
+			& > img
+			{
+				transform: translate(10px, 25px);
+			}
+		}
+	}
+}
+
+section.footer
+{
+	background: #13172d;
+	color: #fff;
+	padding: 0 10px;
+
+	blockquote
+	{
+		max-width: 446px;
+		margin: auto;
+		font-size: 10pt;
+		padding: 85px 5px 85px;
+		position: relative;
+
+		&:before,
+		&:after
+		{
+			font-size: 200pt;
+			line-height: 1;
+			position: absolute;
+			opacity: .2;
+		}
+
+		&:before
+		{
+			content: "“";
+			top: 30px;
+			left: -100px;
+		}
+
+		&:after
+		{
+			content: "”";
+			bottom: -90px;
+			right: -90px;
+		}
+
+	}
+
+	small
+	{
+		font-family: $f_bpreplay;
+		text-align: right;
+		display: block;
+		font-size: 11pt;
+		letter-spacing: 1pt;
+		margin-top: 30px;
+
+		span
+		{
+			display: block;
+			font-size: 9pt;
+			letter-spacing: 0.5pt;
+			line-height: 1;
+		}
+	}
+}
