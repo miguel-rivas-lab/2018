@@ -4,23 +4,26 @@
     <title>Miguel Rivas</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="Miguel Rivas">
-    <meta property="og:site_name" content="Miguel Rivas">
-    <meta property="og:description" content="Web Designer Portfolio">
-    <meta name="keywords" content="miguel, rivas, aguacatekun, aguacate, web, designer, frontend, developer, porfolio, santo, domingo, dominican, republic, united state, usa">
-    <meta name="description" content="Web Designer Portfolio">
-    
-   
-    <link rel="icon" type="image/png" href="https://miguel-rivas.github.io/img/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="https://miguel-rivas.github.io/img/favicon.png">
-    <link rel="apple-touch-icon" href="https://miguel-rivas.github.io/img/favicon.png">
-    <meta name="msapplication-TileColor" content="#222">
-    <meta name="msapplication-TileImage" content="https://miguel-rivas.github.io/img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="css/home.css" rel="stylesheet">
     <link href="css/vendor/venobox.css" rel="stylesheet">
-    <style>header { background-image: url('img/prototype.jpg'); }</style>
-    
+    <style>header { background-image: url('img/prototype.jpg'); }</style> 
+
+    <meta property="og:image" content="https://miguel-rivas.github.io/zapp/img/preview.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <link rel="shortcut icon" type="image/x-icon" href="https://miguel-rivas.github.io/zapp/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="256x256" href="https://miguel-rivas.github.io/zapp/img/favicon-256x256.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="https://miguel-rivas.github.io/zapp/img/favicon-128x128.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="https://miguel-rivas.github.io/zapp/img/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://miguel-rivas.github.io/zapp/img/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://miguel-rivas.github.io/zapp/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="24x24" href="https://miguel-rivas.github.io/zapp/img/favicon-24x24.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://miguel-rivas.github.io/zapp/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://miguel-rivas.github.io/zapp/img/favicon-180x180.png">
+    <meta name="msapplication-TileColor" content="#e9c200">
+    <meta name="msapplication-TileImage" content="https://miguel-rivas.github.io/zapp/img/favicon-128x128.png">
   </head>
   <body>
     <aside class="loading"></aside>
@@ -52,7 +55,7 @@
           <button ng-click="search = 'Design'">Design</button>
         </div>
       </header>
-      <section ng-class="newClass" class="gallery"><a ng-repeat="data in filteredData | filter:search | orderBy:['-date']" ng-href="{{data.url}}" ng-class="{ 'venobox vbox-item':data.isVideo }" target="{{data.target}}" data-vbtype="{{data.isVideo &amp;&amp; 'vimeo' || '' }}" data-autoplay="{{data.isVideo}}" class="{{data.bgColor}}"><img ng-src="img/3d/{{data.preview}}.png">
+      <section ng-class="newClass" class="gallery"><a ng-repeat="data in filteredData | filter:search | orderBy:['-date']" ng-class="{ 'venobox vbox-item':data.isVideo }" target="{{data.target}}" data-vbtype="{{data.isVideo &amp;&amp; 'vimeo' || '' }}" data-autoplay="{{data.isVideo}}" class="{{data.bgColor}}"><img ng-src="img/3d/{{data.preview}}.png">
           <div class="hover">
             <h2>{{ data.title }} /<em> {{ data.type }}</em>
               <time>{{ data.date }}</time>
