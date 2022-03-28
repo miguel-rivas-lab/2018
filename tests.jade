@@ -1,0 +1,58 @@
+doctype html
+html
+	head
+		include jade/vars
+		include jade/functions
+		include jade/metatags
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700", rel="stylesheet", type="text/css")
+		link(href="css/home.css", rel="stylesheet")
+		link(href="css/vendor/venobox.css", rel="stylesheet")
+		style.
+			header { background-image: url('img/prototype.jpg'); }
+		include jade/analytics
+
+	body
+		aside.loading
+		include jade/nav
+
+		main(ng-app="gallery", ng-controller="galleryController as ctr")
+
+			header
+				.container
+					h1
+						| Everything begins with a test.
+					input(
+						type="text"
+						placeholder="Filter Prototypes By"
+						ng-model="search"
+					)
+					button(ng-click="search = ''") All Projects
+					button(ng-click="search = 'Frontend'") HTML / CSS / JS
+					button(ng-click="search = 'Motion Graphics'") Motion Graphics
+					button(ng-click="search = 'Design'") Design
+
+			section.gallery(ng-class="newClass")
+
+				a(
+					ng-repeat="data in filteredData | filter:search | orderBy:['-date']",
+					ng-href="{{data.url}}",
+					ng-class="{ 'venobox vbox-item':data.isVideo }",
+					target="{{data.target}}",
+					class="{{data.bgColor}}",
+					data-vbtype="{{data.isVideo && 'vimeo' || '' }}",
+					data-autoplay="{{data.isVideo}}"
+				)
+					img(ng-src="img/3d/{{data.preview}}.png")
+					.hover
+						h2 {{ data.title }} /
+							em  {{ data.type }}
+							time {{ data.date }}
+						ul
+							li(ng-repeat="element in data.summary | orderBy") {{element}}
+
+		script(src="js/vendor/jquery-1.11.2.min.js")
+		script(src="js/vendor/venobox.min.js")
+		script(src="js/application_cases.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js")
+		script(src="js/tests.js")
+		script(src="js/tests_db.js")

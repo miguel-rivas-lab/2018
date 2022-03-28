@@ -1,0 +1,55 @@
+doctype html
+html
+	head
+		include jade/vars
+		include jade/functions
+		include jade/metatags
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700", rel="stylesheet", type="text/css")
+		link(href="css/bpr.css", rel="stylesheet")
+		link(href="css/vendor/venobox.css", rel="stylesheet")
+		include jade/analytics
+
+	body
+		aside.loading
+		include jade/nav
+
+		main
+			header
+				.column
+					img(src="img/logo/bpr.png")
+					h1 Website Development
+					a.flat.light-blue(href="http://www.bprbank.com/" target="_blank") Go to BPR Bank
+
+			section.content
+				.container
+
+					section.info
+						h2 Brand Overview
+
+						p BPR Bank S.A. is an International License Bank established under the Laws and Regulations of the Republica de Panama, with its headquarters located at Costa Del Este Financial Park, 100FP Tower, Office 33A, Costa del Este Boulevard, City and District of Panama.
+
+					section.info
+						h2 My Role
+							small Web Designer at Pixel Perfect Tree
+
+						p I was provided with a design mockup photoshop file initially.
+
+						ul
+							li Defined project structure and boilerplates.
+							li Installed the missing gems for <em>bootstrap</em> and <em>rail-sass</em>.
+							li Optimized and resized all the images to the minimum width & height.
+							li Used Haml, Sass and jQuery for the front-end development.
+							li Designed and implemented missing elements like OG image (Facebook preview), CMS login and loading.
+							li Defined metadata.
+
+						.skills_box
+							span Haml
+							span Sass
+							span jQuery
+							span Bootstrap
+							span Git
+							span Rails
+
+		script(src="js/vendor/jquery-1.11.2.min.js")
+		script(src="js/vendor/venobox.min.js")
+		script(src="js/application_cases.js")

@@ -1,0 +1,99 @@
+@import 'application_cases';
+@import 'sections/gallery';
+
+::-webkit-input-placeholder { color: #fff; }
+::-moz-placeholder { color: #fff; }
+:-ms-input-placeholder { color: #fff; }
+:-moz-placeholder { color: #fff; }
+
+nav
+{
+	button.fa.fa-bars
+	{
+		color: #ccc;
+	}
+}
+
+header
+{
+	height: auto;
+	padding: 260px 10px;
+	text-align: center;
+	background-color: #222;
+	background-image: url(../img/video-f.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	transition: 500ms all ease;
+
+	@media (max-width: $SmallScreen)
+	{
+		padding: 80px 10px;
+	}
+
+	h1
+	{
+		color: #fff;
+		font-weight: bold;
+		font-size: 25pt;
+		margin-bottom: 70px;
+	}
+
+	.container
+	{
+		max-width: 912px;
+	}
+
+	input,
+	button
+	{
+		text-transform: uppercase;
+		padding: 10px;
+		font-family: $f_montserrat;
+	}
+
+	input
+	{
+		border-radius: 7px;
+		display: block;
+		margin: 18px auto;
+		border: 2px rgba(255, 255, 255, 0.48) solid;
+		font-size: 14pt;
+		width: 500px;
+		max-width: 100%;
+		text-align: center;
+		background: transparent;
+		color: #fff;
+		outline: none;
+		transition: 500ms all ease;
+
+		&:hover
+		{
+			background-color: rgba(255,255,255,.5);
+			color: #000;
+		}
+
+	}
+
+	button
+	{
+		width: 170px;
+		font-size: 8pt;
+		letter-spacing: 1pt;
+		border-radius: 0;
+		border: none;
+		background: rgb(0, 166, 216);
+		color: #fff;
+		transition: 500ms all ease;
+		margin: 6px;
+		cursor: pointer;
+
+		&:hover, &.select
+		{
+			border: none;
+			background: #ff003b;
+			color: #fff;
+		}
+	}
+}
+

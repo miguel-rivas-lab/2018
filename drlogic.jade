@@ -1,0 +1,106 @@
+doctype html
+html
+	head
+		include jade/vars
+		include jade/functions
+		include jade/metatags
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700", rel="stylesheet", type="text/css")
+		link(href="css/drlogic.css", rel="stylesheet")
+		link(href="css/vendor/venobox.css", rel="stylesheet")
+		include jade/analytics
+
+	body
+		aside.loading
+		include jade/nav
+
+		main
+			header
+				.column
+					img(src="img/logo/drlogic.png")
+					h1 Website Redesign
+					a(href="https://player.vimeo.com/video/207152756" data-autoplay="true" data-vbtype="vimeo").venobox
+						img(src="img/videos/drlogic.jpg").video
+					a.flat.green(href="../project/drlogic/home.html" target="_blank") Go to DrLogic
+
+			section.content
+
+				section.info
+					.container
+						h2 Brand Overview
+
+						p In 1986, Dr Logic got his hands on his first Mac and so began a lifelong obsession with Apple. In 2003 he started Dr Logic and over time, gathered together like-minded techies who wanted to do cool stuff with IT.
+
+						p Dr Logic has built a reputation for helping creative companies with all things Mac-related. And for being that little bit different. We’re based in Clerkenwell and we support companies across London.
+
+				section.preview
+					img(src="img/3d/drlogic-home.png")
+					img(src="img/3d/drlogic-about.png").keep_mobile
+					img(src="img/3d/drlogic-portfolio.png")
+					img(src="img/3d/drlogic-contact.png").keep_mobile
+					img(src="img/3d/drlogic-404.png").keep_mobile
+
+				section.info
+					.container
+						h2 My Role
+							small Web Designer at Pixel Perfect Tree
+
+						p I was provided with a design mockup photoshop file initially.
+
+						ul
+							li Defined project structure and boilerplates.
+							li Installed the missing gems for <em>bootstrap</em> and <em>rail-sass</em>.
+							li Optimized and resized all the images to the minimum width & height.
+							li Used Haml, Sass and jQuery for the front-end development.
+							li Designed and implemented missing elements like OG image (Facebook preview), page 404, loading and terms and conditions’s document.
+							li Implemented alongside the lead developer a new way to defined metadata for every project.
+							li Defined metadata.
+
+						.skills_box
+							span Haml
+							span Sass
+							span jQuery
+							span Bootstrap
+							span Git
+							span Rails
+
+			section.footer
+				blockquote(cite="https://www.linkedin.com/in/miguel-rivas-b576bb74/")
+					p Miguel worked on the development of our company website during 2016 Developing the animation in the page headers for the main site pages. He also worked on the design of a charges calculator and some additional site logos.
+
+					p Miguel has an eye for detail and completes work to a high standard. He has a thorough understanding of client requirements and is able to interpret and execute these efficiently and effectively.
+
+					small Jennie Elliott
+						span Marketing Manager at DrLogic
+
+			section.gallery
+
+				a(href="../project/drlogic/home.html" target="_blank").mint
+					img(src="img/3d/drlogic-home.png")
+					.hover
+						p GO TO DRLOGIC'S HOME PAGE
+
+				a(href="../project/drlogic/404.html" target="_blank").purple
+					img(src="img/3d/drlogic-404.png")
+					.hover
+						p GO TO DRLOGIC'S PAGE 404
+
+				a(href="../project/drlogic/contact-us.html" target="_blank").orange
+					img(src="img/3d/drlogic-contact.png")
+					.hover
+						p GO TO DRLOGIC'S CONTACT PAGE
+
+				a(href="../project/drlogic/about-us.html" target="_blank").salmon
+					img(src="img/3d/drlogic-about.png")
+					.hover
+						p GO TO DRLOGIC'S ABOUT US PAGE
+
+				a(href="../project/drlogic/documents/terms.pdf" target="_blank").blue
+					img(src="img/3d/terms.png")
+					.hover
+						p SEE DRLOGIC'S TERMS
+
+
+
+		script(src="js/vendor/jquery-1.11.2.min.js")
+		script(src="js/vendor/venobox.min.js")
+		script(src="js/application_cases.js")
