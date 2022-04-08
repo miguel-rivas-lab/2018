@@ -1,0 +1,17 @@
+main.night {
+	.workarea {
+		background-color: #6c5d91;
+	}
+
+	.bk-ornament {
+		bottom: -250px;
+		left: 20%;
+		width: 600px;
+		height: 600px;
+		background: url("../imgs/moon.svg") center no-repeat;
+	}
+
+	.bird {
+		background-image: url("../imgs/sprites-06.png") !important;
+	}
+}

@@ -1,0 +1,106 @@
+$transition: 500ms;
+
+$orange: #f1b323;
+$purple: #546583;
+$dark_purple: #071429;
+$pink: #e76573;
+$green: #99d658;
+$cyan: #3dae9f;
+
+$darker_purple: #1d222a;
+
+$largeScreen: 1400px;
+$MediumScreen: 1120px;
+$SmallScreen: 800px;
+
+// ------------------ Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+// ------------------ Modules
+@import "nano-grid/scss/nano-grid";
+@import "nano-grid/scss/btn";
+@import "nano-grid/scss/scroll-area";
+// @import "nano-grid/scss/tooltip";
+// @import "nano-grid/scss/range-slider";
+
+@import 'general/mixings';
+@import 'general/keyframes';
+@import "general/icomoon";
+@import "general/layers";
+@import "general/fonts";
+@import "general/theme";
+
+// @import "desktop/home";
+// @import 'desktop/portfolio';
+// @import 'desktop/contacts';
+
+@import 'components/gallery';
+@import 'components/container';
+@import 'components/nano-app';
+@import 'components/nano-box';
+@import 'components/listing';
+
+@import "skins/clock";
+@import "skins/dragon-night";
+@import "skins/dragon";
+@import "skins/night";
+@import "skins/sunset";
+@import "skins/underwater";
+
+/*----------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", Helvetica, Arial, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  overflow: hidden;
+}
+
+main {
+  --color-title: #9c330a;
+  --color-background: #ffffff;
+  --color-foreground: #202028;
+  --color-workarea-background: #f8f7fb;
+  --color-panel-details-background: #ffffff;
+  --color-panel-background: #272b42;
+  --color-panel-border-separator: #cccccc;
+  --color-border: #444444;
+  --color-palette: #f7f7f7;
+  --color-label: #104e86;
+  --color-legend: #9c330a;
+  --color-background-input: #dadada;
+  --color-background-input2: #d7d7d7;
+  --color-table-background: hsl(240deg 20% 80% / 0.2);
+  --color-table-background-2: hsl(240deg 20% 85% / 0.2);
+  --color-table-background-hover: hsl(240deg 35% 90% / 0.2);
+  --map-background: #c88396;
+  --title-shadow: 0;
+  --color-shadow: rgb(0 0 0 / 65%);
+  --shadow-depth: 2px 2px 5px;
+  color: var(--color-foreground);
+}
+
+/*------------------------*/
+
+.btn.flat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.fsz {
+    width: 100%;
+  }
+}
+
+/* ------- random*/
+
+hr {
+  border-color: var(--color-border);
+  border-width: 0 0 1px 0;
+}

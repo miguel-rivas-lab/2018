@@ -1,0 +1,12 @@
+.container {
+  margin: auto;
+  padding: 1rem;
+  max-width: 100%;
+  @each $size in (400, 900, 1450) {
+    &.sz#{$size} {
+      width: #{$size}px;
+      flex-basis: #{$size}px;
+      margin: auto;
+    }
+  }
+}

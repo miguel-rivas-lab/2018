@@ -1,0 +1,46 @@
+h1 {
+  font-weight: 600;
+  font-size: 25px;
+  color: var(--color-title);
+}
+
+h2 {
+  color: #d17e5e;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+h4 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+h5 {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+p,
+li {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  margin: 0 0 0.5rem;
+  line-height: 1;
+}

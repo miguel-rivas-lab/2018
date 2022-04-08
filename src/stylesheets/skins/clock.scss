@@ -1,0 +1,29 @@
+main.clock {
+	.workarea {
+		background-color: #8c9f5b;
+	}
+
+	.bk-ornament {
+		bottom: 70px;
+		left: 100px;
+		width: 432px;
+		height: 548px;
+		animation: mud2 ease-in-out 3s infinite alternate;
+		background-image: url("../imgs/bk_b4_clock.png");
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.bird {
+		background-image: url("../imgs/sprites-06.png") !important;
+	}
+	
+	@keyframes mud2 {
+		from {
+			bottom: 70px;
+		}
+		to {
+			bottom: 90px;
+		}
+	}
+}

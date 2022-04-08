@@ -1,0 +1,21 @@
+main.dragon {
+	.workarea
+	{
+		background-color: #3e8bad;
+	}
+	
+	.bk-ornament
+	{
+		right: -600px;
+		bottom: -675px;
+		width: 1350px;
+		height: 1350px;
+		transform: rotate(360deg);
+		animation: rtl linear 20s infinite;
+		background: url('../imgs/dragon.svg') center center no-repeat;
+	}
+
+	.bird {
+		background-image: url("../imgs/sprites-06.png") !important;
+	}
+}
