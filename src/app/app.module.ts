@@ -1,13 +1,12 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { IconComponent } from '../nano-grid-angular/components/icon/icon.component';
-import { RowComponent } from '../nano-grid-angular/components/row/row.component';
-import { ColumnComponent } from '../nano-grid-angular/components/column/column.component';
-
+// import { RowComponent } from '../nano-grid-angular/components/row/row.component';
+// import { ColumnComponent } from '../nano-grid-angular/components/column/column.component';
 import { BtnComponent } from '../nano-grid-angular/components/btn/btn.component';
 import { ScrollAreaComponent } from '../nano-grid-angular/components/scroll-area/scroll-area.component';
 
@@ -15,8 +14,8 @@ import { ScrollAreaComponent } from '../nano-grid-angular/components/scroll-area
   declarations: [
     AppComponent,
     IconComponent,
-    RowComponent,
-    ColumnComponent,
+    // RowComponent,
+    // ColumnComponent,
     BtnComponent,
     ScrollAreaComponent,
   ],
@@ -25,6 +24,7 @@ import { ScrollAreaComponent } from '../nano-grid-angular/components/scroll-area
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

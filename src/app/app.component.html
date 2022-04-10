@@ -1,8 +1,11 @@
 <main>
-  <row class="nano-app">
-    <!-- <Navigation></Navigation> -->
-    <column size="100%-50" class="workarea">
-      <router-outlet></router-outlet>
-    </column>
-  </row>
+  <nn-scroll-area color="royal-purple">
+    <nn-row class="nano-app">
+      <!-- <Navigation></Navigation> -->
+      <nn-column size="100%-50, 900" class="workarea">
+        <nn-btn glyph="monster" text="olis"></nn-btn>
+        <router-outlet></router-outlet>
+      </nn-column>
+    </nn-row>
+  </nn-scroll-area>
 </main>
